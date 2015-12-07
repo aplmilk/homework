@@ -1,0 +1,14 @@
+EN clock NULL F:/CPU/clock.vhd sub00/vhpl00 1438421647
+EN writeback NULL F:/CPU/WriteBack.vhd sub00/vhpl06 1438421655
+AR alu behavioral F:/CPU/alu.vhd sub00/vhpl05 1438421652
+AR cpu behavioral F:/CPU/CPU.vhd sub00/vhpl10 1438421672
+EN cpu NULL F:/CPU/CPU.vhd sub00/vhpl09 1438421671
+EN store NULL F:/CPU/store.vhd sub00/vhpl08 1438421653
+AR visitctrl behavioral F:/CPU/VisitCtrl.vhd sub00/vhpl13 1438421661
+AR quzhi behavioral F:/CPU/quzhi.vhd sub00/vhpl03 1438421650
+AR clock behavioral F:/CPU/clock.vhd sub00/vhpl01 1438421648
+EN visitctrl NULL F:/CPU/VisitCtrl.vhd sub00/vhpl12 1438421660
+AR store behavioral F:/CPU/store.vhd sub00/vhpl11 1438421654
+EN quzhi NULL F:/CPU/quzhi.vhd sub00/vhpl02 1438421649
+AR writeback behavioral F:/CPU/WriteBack.vhd sub00/vhpl07 1438421656
+EN alu NULL F:/CPU/alu.vhd sub00/vhpl04 1438421651

@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1432129854 source:c:\users\lenovo\desktop\13month\quicksort\main.cpp
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1432537476 source:e:\13month\quicksort\main.cpp
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	<ctime>
+
+1432546246 source:h:\13month\quicksort\main.cpp
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	<ctime>
+

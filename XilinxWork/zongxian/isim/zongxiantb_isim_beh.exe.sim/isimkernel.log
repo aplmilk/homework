@@ -1,0 +1,10 @@
+Command line:
+   zongxiantb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  62506
+
+Fri Jun 26 22:05:55 2015
+
+
+ Elaboration Time: 0.249602 sec

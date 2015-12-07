@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1432535766 source:e:\13month\paixu\main.cpp
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	<ctime>
+
+1432535766 source:h:\13month\paixu\main.cpp
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	<ctime>
+

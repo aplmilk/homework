@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% load staticfiles %}
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/tp.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>图书管理</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+<!--
+.STYLE5 {
+	color: #0066FF;
+	font-size: 18px;
+	font-weight: bold;
+}
+.STYLE6 {font-size: 16}
+-->
+</style>
+<!-- InstanceEndEditable -->
+<style type="text/css">
+<!--
+.STYLE3 {color: #D7E9E9}
+.STYLE4 {font-weight: bold; font-size: 18px;}
+background {
+	background-color: #D6E9ED;
+}
+-->
+</style>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="100%" border="0" cellspacing="8">
+    <tr>
+      <td><div align="center" class="STYLE3"><img src={% static "top.jpg" %} alt=" " width="900" height="135" /></div></td>
+    </tr>
+    <tr>
+      <td><table width="80%" border="0" align="center" cellspacing="2">
+        <tr>
+          <td width="25%" class="STYLE3"><div align="center"><span class="STYLE4"><a href="/index/">主页</a></span></div></td>
+          <td width="25%" class="STYLE3"><div align="center"><span class="STYLE4"><a href="/addauthor/">添加作者</a></span></div></td>
+          <td width="25%" class="STYLE3"><div align="center"><span class="STYLE4"><a href="/addbook/">添加书籍</a></span></div></td>
+          <td width="25%" class="STYLE3"><div align="center"><span class="STYLE4"><a href="/books/">图书管理</a></span></div></td>
+        </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td><!-- InstanceBeginEditable name="               " -->
+        <p>&nbsp;</p>
+        <table width="100%" border="0">
+          <tr>
+            <td width="50%"><p align="center" class="STYLE4">管理系统的几点小tips：</p>
+                <ol>
+                  <p align="center" class="STYLE4 STYLE6">1.图书管理处可以看到全部图书，并可对书籍进行删改</p>
+                  <p align="center" class="STYLE4 STYLE6">2.添加书籍前请先确认作者在图书库中，否则请先添加作者</p>
+                  <p align="center" class="STYLE4 STYLE6">作者：
+                    <label for="textfield"></label>
+                      <input name="info" type="text" id="info" size="20" />
+                      <label for="Submit"></label>
+                      <input type="submit" name="Submit" value="查找" id="Submit" />
+                  </p>
+                  <p class="STYLE4 STYLE6">&nbsp;</p>
+                </ol>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p></td>
+            <td><table width="401" height="196" border="1" align="center">
+                <tr>
+                  <th scope="col">最新图书</th>
+                </tr>
+              {% for book in lattest %}
+              <tr>
+                <td><a href="/bookinfo/{{book.ISBN}}/">{{book.Title}}</a></td>
+              </tr>
+              {% endfor %}
+            </table>
+                <p align="right" class="STYLE4"><a href="/books/">更多书籍&gt;&gt;</a></p></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      <!-- InstanceEndEditable --></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</form>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,16 @@
+Tue Jul 28 16:30:15 ?????? 2015
+Trace back: Error: Illegal widget path to WinfoTopFrame: 
+    while executing
+"vsimwidgets::dfAddDataflowFromWave $tree [$tree getactivecursortime] $sigList"
+    (procedure "WaveShowDFDrivers" line 31)
+    invoked from within
+"WaveShowDFDrivers $winname"
+    (procedure "Wave1Up" line 22)
+    invoked from within
+"Wave1Up $widget $x $y"
+    (procedure "wave_select_up" line 4)
+    invoked from within
+"wave_select_up	 .main_pane.wave.interior.cs.body.pw.wf.grid.row0,wave.data 94 194 924 386 "
+    (command bound to event)
+  2: ::tkerror {Error: Illegal widget path to WinfoTopFrame: }
+  1: ::bgerror {Error: Illegal widget path to WinfoTopFrame: }

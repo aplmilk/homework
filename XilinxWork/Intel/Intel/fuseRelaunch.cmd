@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "G:/Intel/inteltb_isim_beh.exe" -prj "G:/Intel/inteltb_beh.prj" "work.inteltb" 

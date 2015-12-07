@@ -1,0 +1,28 @@
+Command line:
+   inteltb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  45200
+
+Sun Jun 07 23:00:21 2015
+
+
+ Elaboration Time: 0.125 sec
+
+ Current Memory Usage: 368.214 Meg
+
+ Total Signals          : 20
+ Total Nets             : 4131
+ Total Signal Drivers   : 11
+ Total Blocks           : 5
+ Total Primitive Blocks : 4
+ Total Processes        : 4
+ Total Traceable Variables  : 10
+ Total Scalar Nets and Variables : 4509
+
+ Total Simulation Time: 1.23438 sec
+
+ Current Memory Usage: 368.214 Meg
+
+Sun Jun 07 23:07:58 2015
+

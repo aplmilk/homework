@@ -1,0 +1,29 @@
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clo | SETUP   |         N/A|    16.113ns|     N/A|           0
+  ckpart/q<1>                               | HOLD    |     2.044ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clo | SETUP   |         N/A|     5.857ns|     N/A|           0
+  ckpart/q<0>                               | HOLD    |     3.386ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net RST | SETUP   |         N/A|    58.079ns|     N/A|           0
+  _IBUF                                     | HOLD    |     3.286ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clk | SETUP   |         N/A|     5.860ns|     N/A|         565
+  gp                                        | HOLD    |     2.923ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net alu | SETUP   |         N/A|     4.542ns|     N/A|           0
+  part/R_0_not0001                          | HOLD    |     3.317ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+
+
+1 constraint not met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the 
+   constraint does not cover any paths or that it has no requested value.
+
+

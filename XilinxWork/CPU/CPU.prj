@@ -1,0 +1,7 @@
+vhdl work "store.vhd"
+vhdl work "quzhi.vhd"
+vhdl work "clock.vhd"
+vhdl work "alu.vhd"
+vhdl work "WriteBack.vhd"
+vhdl work "VisitCtrl.vhd"
+vhdl work "CPU.vhd"

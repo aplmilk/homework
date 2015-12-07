@@ -1,0 +1,193 @@
+xst -ise "E:/xilinxwork/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "E:/xilinxwork/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "E:/xilinxwork/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "E:/xilinxwork/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "E:/xilinxwork/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "E:/xilinxwork/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "E:/xilinxwork/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "E:/xilinxwork/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "E:/xilinxwork/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "E:/xilinxwork/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "F:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "F:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "F:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "F:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "F:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "F:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "F:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "F:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "F:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "F:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "F:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "F:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "F:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "F:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "F:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "F:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "F:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "F:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "F:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "F:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "F:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "F:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "F:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "F:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "F:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "F:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "F:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "F:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "F:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "F:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "F:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "F:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "F:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "F:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "F:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "F:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "F:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "G:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "G:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "G:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "G:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "G:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "G:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "G:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "G:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "G:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "G:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "G:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "G:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "G:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "G:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "G:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "G:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "G:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "G:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "G:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "G:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "G:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "G:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "G:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "G:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "G:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "G:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "G:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "G:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "G:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "G:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "G:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "G:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "G:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "G:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "G:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "G:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "G:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "G:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "G:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "G:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "G:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "G:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "G:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "G:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "G:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "G:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "G:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "G:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "G:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "G:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "G:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "G:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "G:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "G:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "G:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "G:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "G:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "G:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "G:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "G:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "G:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "G:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "G:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "G:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "G:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "F:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "F:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "F:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "F:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "F:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "F:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "F:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "F:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "F:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "F:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "F:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "F:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "F:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "F:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "F:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "F:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "F:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "F:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "F:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "F:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "F:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "F:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "F:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "F:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "F:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "F:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "F:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "F:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "F:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "F:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "F:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "F:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "F:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "F:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "F:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "F:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "F:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "F:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "F:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "F:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "F:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "F:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "F:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "F:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "F:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+ngdbuild -ise "F:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "F:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "F:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "F:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "F:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd
+xst -ise "F:/CPU/CPU.ise" -intstyle ise -ifn CPU.xst -ofn CPU.syr
+ngdbuild -ise "F:/CPU/CPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "CPU.ucf" -p xcv200-pq240-4 "CPU.ngc" CPU.ngd
+map -ise "F:/CPU/CPU.ise" -intstyle ise -p xcv200-pq240-4 -cm area -pr b -k 4 -c 100 -tx off -o CPU_map.ncd CPU.ngd CPU.pcf
+par -ise "F:/CPU/CPU.ise" -w -intstyle ise -ol std -t 1 CPU_map.ncd CPU.ncd CPU.pcf
+trce -ise "F:/CPU/CPU.ise" -intstyle ise -e 3 -s 4 -xml CPU CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+bitgen -ise "F:/CPU/CPU.ise" -intstyle ise -f CPU.ut CPU.ncd

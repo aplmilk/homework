@@ -1,0 +1,890 @@
+Release 9.1i - xst J.30
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 2.06 s | Elapsed : 0.00 / 2.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 2.06 s | Elapsed : 0.00 / 2.00 s
+ 
+--> Reading design: CPU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CPU.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CPU"
+Output Format                      : NGC
+Target Device                      : xcv200-4-pq240
+
+---- Source Options
+Top Module Name                    : CPU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : lut
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100
+Add Generic Clock Buffer(BUFG)     : 1
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Convert Tristates To Logic         : Yes
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : CPU.lso
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "F:/CPU/clock.vhd" in Library work.
+Architecture behavioral of Entity clock is up to date.
+Compiling vhdl file "F:/CPU/quzhi.vhd" in Library work.
+Architecture behavioral of Entity quzhi is up to date.
+Compiling vhdl file "F:/CPU/alu.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "F:/CPU/store.vhd" in Library work.
+Architecture behavioral of Entity store is up to date.
+Compiling vhdl file "F:/CPU/WriteBack.vhd" in Library work.
+Entity <writeback> compiled.
+Entity <writeback> (Architecture <behavioral>) compiled.
+Compiling vhdl file "F:/CPU/VisitCtrl.vhd" in Library work.
+Architecture behavioral of Entity visitctrl is up to date.
+Compiling vhdl file "F:/CPU/CPU.vhd" in Library work.
+Architecture behavioral of Entity cpu is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <CPU> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <clock> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <quzhi> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <alu> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <store> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <WriteBack> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <VisitCtrl> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <CPU> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "F:/CPU/CPU.vhd" line 154: Instantiating black box module <bufgp>.
+Entity <CPU> analyzed. Unit <CPU> generated.
+
+Analyzing Entity <clock> in library <work> (Architecture <behavioral>).
+Entity <clock> analyzed. Unit <clock> generated.
+
+Analyzing Entity <quzhi> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "F:/CPU/quzhi.vhd" line 44: The following signals are missing in the process sensitivity list:
+   pcupdate, pc.
+Entity <quzhi> analyzed. Unit <quzhi> generated.
+
+Analyzing Entity <alu> in library <work> (Architecture <behavioral>).
+WARNING:Xst:790 - "F:/CPU/alu.vhd" line 87: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:819 - "F:/CPU/alu.vhd" line 47: The following signals are missing in the process sensitivity list:
+   CF, kdata, cy, zy.
+Entity <alu> analyzed. Unit <alu> generated.
+
+Analyzing Entity <store> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "F:/CPU/store.vhd" line 39: The following signals are missing in the process sensitivity list:
+   IR.
+Entity <store> analyzed. Unit <store> generated.
+
+Analyzing Entity <WriteBack> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "F:/CPU/WriteBack.vhd" line 48: The following signals are missing in the process sensitivity list:
+   addr.
+Entity <WriteBack> analyzed. Unit <WriteBack> generated.
+
+Analyzing Entity <VisitCtrl> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "F:/CPU/VisitCtrl.vhd" line 55: The following signals are missing in the process sensitivity list:
+   DBUS, IR, aluout, addr.
+Entity <VisitCtrl> analyzed. Unit <VisitCtrl> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <clock>.
+    Related source file is "F:/CPU/clock.vhd".
+    Found 4-bit register for signal <t>.
+    Found 4-bit register for signal <q>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <clock> synthesized.
+
+
+Synthesizing Unit <quzhi>.
+    Related source file is "F:/CPU/quzhi.vhd".
+WARNING:Xst:646 - Signal <ir> is assigned but never used.
+WARNING:Xst:737 - Found 16-bit latch for signal <IROUT>.
+WARNING:Xst:737 - Found 16-bit latch for signal <pc>.
+WARNING:Xst:737 - Found 16-bit latch for signal <PCout>.
+Unit <quzhi> synthesized.
+
+
+Synthesizing Unit <alu>.
+    Related source file is "F:/CPU/alu.vhd".
+WARNING:Xst:646 - Signal <result> is assigned but never used.
+WARNING:Xst:646 - Signal <a> is assigned but never used.
+WARNING:Xst:646 - Signal <b> is assigned but never used.
+WARNING:Xst:646 - Signal <c> is assigned but never used.
+WARNING:Xst:646 - Signal <d> is assigned but never used.
+WARNING:Xst:646 - Signal <ZF> is assigned but never used.
+WARNING:Xst:737 - Found 1-bit latch for signal <CF>.
+WARNING:Xst:737 - Found 8-bit latch for signal <aluout>.
+WARNING:Xst:737 - Found 1-bit latch for signal <cy>.
+WARNING:Xst:737 - Found 8-bit latch for signal <R_0>.
+WARNING:Xst:737 - Found 8-bit latch for signal <R_1>.
+WARNING:Xst:737 - Found 8-bit latch for signal <R_2>.
+WARNING:Xst:737 - Found 8-bit latch for signal <R_3>.
+WARNING:Xst:737 - Found 8-bit latch for signal <R_4>.
+WARNING:Xst:737 - Found 8-bit latch for signal <R_5>.
+WARNING:Xst:737 - Found 8-bit latch for signal <R_6>.
+WARNING:Xst:737 - Found 8-bit latch for signal <R_7>.
+WARNING:Xst:737 - Found 16-bit latch for signal <addr>.
+WARNING:Xst - Property "use_dsp48" is not applicable for this technology.
+WARNING:Xst - Property "use_dsp48" is not applicable for this technology.
+WARNING:Xst - Property "use_dsp48" is not applicable for this technology.
+    Found 8-bit subtractor for signal <aluout$addsub0000> created at line 108.
+    Found 8-bit subtractor for signal <aluout$addsub0001> created at line 108.
+    Found 8-bit 8-to-1 multiplexer for signal <R$mux0000> created at line 95.
+    Found 8-bit 8-to-1 multiplexer for signal <R$mux0001> created at line 107.
+    Found 9-bit adder for signal <result$add0000> created at line 119.
+    Found 9-bit adder for signal <result$addsub0000> created at line 119.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  16 Multiplexer(s).
+Unit <alu> synthesized.
+
+
+Synthesizing Unit <store>.
+    Related source file is "F:/CPU/store.vhd".
+WARNING:Xst:647 - Input <IR<10:0>> is never used.
+WARNING:Xst:646 - Signal <rtep> is assigned but never used.
+WARNING:Xst:737 - Found 8-bit latch for signal <Rtemp>.
+Unit <store> synthesized.
+
+
+Synthesizing Unit <WriteBack>.
+    Related source file is "F:/CPU/WriteBack.vhd".
+WARNING:Xst:647 - Input <IR<7:0>> is never used.
+WARNING:Xst:737 - Found 8-bit latch for signal <rdata>.
+WARNING:Xst:737 - Found 4-bit latch for signal <raddr>.
+WARNING:Xst:737 - Found 16-bit latch for signal <pcnew>.
+WARNING:Xst:737 - Found 8-bit latch for signal <IODB>.
+WARNING:Xst - Property "use_dsp48" is not applicable for this technology.
+    Found 16-bit adder for signal <pcnew$share0000>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <WriteBack> synthesized.
+
+
+Synthesizing Unit <VisitCtrl>.
+    Related source file is "F:/CPU/VisitCtrl.vhd".
+WARNING:Xst:647 - Input <IR<10:0>> is never used.
+WARNING:Xst:737 - Found 16-bit latch for signal <ABUS>.
+WARNING:Xst:737 - Found 8-bit latch for signal <cundata>.
+WARNING:Xst:737 - Found 16-bit latch for signal <qudata>.
+    Found 16-bit tristate buffer for signal <DBUS>.
+    Summary:
+	inferred  16 Tristate(s).
+Unit <VisitCtrl> synthesized.
+
+
+Synthesizing Unit <CPU>.
+    Related source file is "F:/CPU/CPU.vhd".
+Unit <CPU> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 16-bit adder                                          : 1
+ 8-bit subtractor                                      : 2
+ 9-bit adder                                           : 2
+# Registers                                            : 5
+ 1-bit register                                        : 4
+ 4-bit register                                        : 1
+# Latches                                              : 23
+ 1-bit latch                                           : 2
+ 16-bit latch                                          : 7
+ 4-bit latch                                           : 1
+ 8-bit latch                                           : 13
+# Multiplexers                                         : 2
+ 8-bit 8-to-1 multiplexer                              : 2
+# Tristates                                            : 1
+ 16-bit tristate buffer                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file 'v200.nph' in environment C:\Xilinx91i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 16-bit adder                                          : 1
+ 8-bit subtractor borrow in                            : 1
+ 9-bit adder carry in                                  : 1
+# Registers                                            : 8
+ Flip-Flops                                            : 8
+# Latches                                              : 23
+ 1-bit latch                                           : 2
+ 16-bit latch                                          : 7
+ 4-bit latch                                           : 1
+ 8-bit latch                                           : 13
+# Multiplexers                                         : 2
+ 8-bit 8-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <clockpart/t_1> in Unit <CPU> is equivalent to the following FF/Latch, which will be removed : <clockpart/q_2> 
+INFO:Xst:2261 - The FF/Latch <clockpart/t_3> in Unit <CPU> is equivalent to the following FF/Latch, which will be removed : <clockpart/q_0> 
+INFO:Xst:2261 - The FF/Latch <clockpart/t_2> in Unit <CPU> is equivalent to the following FF/Latch, which will be removed : <clockpart/q_3> 
+INFO:Xst:2261 - The FF/Latch <clockpart/t_0> in Unit <CPU> is equivalent to the following FF/Latch, which will be removed : <clockpart/q_1> 
+
+Optimizing unit <CPU> ...
+
+Optimizing unit <alu> ...
+
+Optimizing unit <WriteBack> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block CPU, actual ratio is 11.
+Latch quzhipart/IROUT_11 has been replicated 1 time(s)
+Latch quzhipart/IROUT_12 has been replicated 1 time(s)
+Latch quzhipart/IROUT_13 has been replicated 1 time(s)
+Latch quzhipart/IROUT_14 has been replicated 1 time(s)
+Latch quzhipart/IROUT_15 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : CPU.ngr
+Top Level Output File Name         : CPU
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 112
+
+Cell Usage :
+# BELS                             : 611
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 15
+#      LUT2                        : 91
+#      LUT3                        : 191
+#      LUT4                        : 180
+#      LUT4_D                      : 1
+#      MUXCY                       : 30
+#      MUXF5                       : 51
+#      MUXF6                       : 16
+#      VCC                         : 1
+#      XORCY                       : 31
+# FlipFlops/Latches                : 231
+#      FDC                         : 3
+#      FDP                         : 1
+#      LD                          : 60
+#      LDC                         : 32
+#      LDCE                        : 64
+#      LDCP                        : 37
+#      LDCPE                       : 1
+#      LDE                         : 1
+#      LDE_1                       : 32
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 111
+#      IBUF                        : 9
+#      IOBUF                       : 16
+#      OBUF                        : 86
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : v200pq240-4 
+
+ Number of Slices:                     266  out of   2352    11%  
+ Number of Slice Flip Flops:           223  out of   4704     4%  
+ Number of 4 input LUTs:               481  out of   4704    10%  
+ Number of IOs:                        112
+ Number of bonded IOBs:                112  out of    166    67%  
+    IOB Flip Flops:                      8
+ Number of GCLKs:                        1  out of      4    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------+----------------------------+-------+
+Clock Signal                                   | Clock buffer(FF name)      | Load  |
+-----------------------------------------------+----------------------------+-------+
+CLK                                            | BUFGP                      | 4     |
+clockpart/t_0                                  | NONE(quzhipart/PCout_6)    | 61    |
+clockpart/t_3                                  | NONE(writebackpart/pcnew_3)| 52    |
+clockpart/t_2                                  | NONE(storepart/Rtemp_7)    | 24    |
+RST                                            | IBUF                       | 24    |
+alupart/R_0_not0001(alupart/R_0_not00011:O)    | NONE(*)(alupart/R_6_2)     | 64    |
+alupart/CF_cmp_eq0000(alupart/CF_cmp_eq00001:O)| NONE(*)(alupart/CF)        | 1     |
+clockpart/t_1                                  | NONE(alupart/cy)           | 1     |
+-----------------------------------------------+----------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------------+----------------------------+-------+
+Control Signal                                                   | Buffer(FF name)            | Load  |
+-----------------------------------------------------------------+----------------------------+-------+
+RST                                                              | IBUF                       | 100   |
+quzhipart/IROUT_5__and0000(quzhipart/IROUT_5__and00001:O)        | NONE(quzhipart/IROUT_5)    | 1     |
+quzhipart/IROUT_5__and0001(quzhipart/IROUT_5__and00011:O)        | NONE(quzhipart/IROUT_5)    | 1     |
+quzhipart/IROUT_11__and0000(quzhipart/IROUT_11__and00001:O)      | NONE(quzhipart/IROUT_11)   | 2     |
+quzhipart/IROUT_11__and0001(quzhipart/IROUT_11__and00011:O)      | NONE(quzhipart/IROUT_11)   | 2     |
+quzhipart/IROUT_15__and0000(quzhipart/IROUT_15__and00001:O)      | NONE(quzhipart/IROUT_15_1) | 2     |
+quzhipart/IROUT_15__and0001(quzhipart/IROUT_15__and00011:O)      | NONE(quzhipart/IROUT_15_1) | 2     |
+quzhipart/IROUT_1__and0000(quzhipart/IROUT_1__and00001:O)        | NONE(quzhipart/IROUT_1)    | 1     |
+quzhipart/IROUT_1__and0001(quzhipart/IROUT_1__and00011:O)        | NONE(quzhipart/IROUT_1)    | 1     |
+quzhipart/IROUT_0__and0000(quzhipart/IROUT_0__and00001:O)        | NONE(quzhipart/IROUT_0)    | 1     |
+quzhipart/IROUT_0__and0001(quzhipart/IROUT_0__and00011:O)        | NONE(quzhipart/IROUT_0)    | 1     |
+quzhipart/IROUT_14__and0000(quzhipart/IROUT_14__and00001:O)      | NONE(quzhipart/IROUT_14_1) | 2     |
+quzhipart/IROUT_14__and0001(quzhipart/IROUT_14__and00011:O)      | NONE(quzhipart/IROUT_14_1) | 2     |
+quzhipart/IROUT_13__and0000(quzhipart/IROUT_13__and00001:O)      | NONE(quzhipart/IROUT_13)   | 2     |
+quzhipart/IROUT_13__and0001(quzhipart/IROUT_13__and00011:O)      | NONE(quzhipart/IROUT_13)   | 2     |
+quzhipart/IROUT_4__and0000(quzhipart/IROUT_4__and00001:O)        | NONE(quzhipart/IROUT_4)    | 1     |
+quzhipart/IROUT_4__and0001(quzhipart/IROUT_4__and00011:O)        | NONE(quzhipart/IROUT_4)    | 1     |
+quzhipart/IROUT_9__and0000(quzhipart/IROUT_9__and00001:O)        | NONE(quzhipart/IROUT_9)    | 1     |
+quzhipart/IROUT_9__and0001(quzhipart/IROUT_9__and00011:O)        | NONE(quzhipart/IROUT_9)    | 1     |
+quzhipart/IROUT_8__and0000(quzhipart/IROUT_8__and00001:O)        | NONE(quzhipart/IROUT_8)    | 1     |
+quzhipart/IROUT_8__and0001(quzhipart/IROUT_8__and00011:O)        | NONE(quzhipart/IROUT_8)    | 1     |
+quzhipart/IROUT_3__and0000(quzhipart/IROUT_3__and00001:O)        | NONE(quzhipart/IROUT_3)    | 1     |
+quzhipart/IROUT_3__and0001(quzhipart/IROUT_3__and00011:O)        | NONE(quzhipart/IROUT_3)    | 1     |
+quzhipart/IROUT_7__and0000(quzhipart/IROUT_7__and00001:O)        | NONE(quzhipart/IROUT_7)    | 1     |
+quzhipart/IROUT_7__and0001(quzhipart/IROUT_7__and00011:O)        | NONE(quzhipart/IROUT_7)    | 1     |
+quzhipart/IROUT_2__and0000(quzhipart/IROUT_2__and00001:O)        | NONE(quzhipart/IROUT_2)    | 1     |
+quzhipart/IROUT_2__and0001(quzhipart/IROUT_2__and00011:O)        | NONE(quzhipart/IROUT_2)    | 1     |
+quzhipart/IROUT_12__and0000(quzhipart/IROUT_12__and00001:O)      | NONE(quzhipart/IROUT_12)   | 2     |
+quzhipart/IROUT_12__and0001(quzhipart/IROUT_12__and00011:O)      | NONE(quzhipart/IROUT_12)   | 2     |
+quzhipart/IROUT_10__and0000(quzhipart/IROUT_10__and00001:O)      | NONE(quzhipart/IROUT_10)   | 1     |
+quzhipart/IROUT_10__and0001(quzhipart/IROUT_10__and00011:O)      | NONE(quzhipart/IROUT_10)   | 1     |
+quzhipart/IROUT_6__and0000(quzhipart/IROUT_6__and00001:O)        | NONE(quzhipart/IROUT_6)    | 1     |
+quzhipart/IROUT_6__and0001(quzhipart/IROUT_6__and00011:O)        | NONE(quzhipart/IROUT_6)    | 1     |
+visitctrlpart/ABUS_15__and0000(visitctrlpart/ABUS_15__and00001:O)| NONE(visitctrlpart/ABUS_15)| 1     |
+visitctrlpart/ABUS_15__and0001(visitctrlpart/ABUS_15__and00011:O)| NONE(visitctrlpart/ABUS_15)| 1     |
+visitctrlpart/ABUS_4__and0000(visitctrlpart/ABUS_4__and00001:O)  | NONE(visitctrlpart/ABUS_4) | 1     |
+visitctrlpart/ABUS_4__and0001(visitctrlpart/ABUS_4__and00011:O)  | NONE(visitctrlpart/ABUS_4) | 1     |
+visitctrlpart/ABUS_3__and0000(visitctrlpart/ABUS_3__and00001:O)  | NONE(visitctrlpart/ABUS_3) | 1     |
+visitctrlpart/ABUS_3__and0001(visitctrlpart/ABUS_3__and00011:O)  | NONE(visitctrlpart/ABUS_3) | 1     |
+visitctrlpart/ABUS_11__and0000(visitctrlpart/ABUS_11__and00001:O)| NONE(visitctrlpart/ABUS_11)| 1     |
+visitctrlpart/ABUS_11__and0001(visitctrlpart/ABUS_11__and00011:O)| NONE(visitctrlpart/ABUS_11)| 1     |
+visitctrlpart/ABUS_9__and0000(visitctrlpart/ABUS_9__and00001:O)  | NONE(visitctrlpart/ABUS_9) | 1     |
+visitctrlpart/ABUS_9__and0001(visitctrlpart/ABUS_9__and00011:O)  | NONE(visitctrlpart/ABUS_9) | 1     |
+visitctrlpart/ABUS_10__and0000(visitctrlpart/ABUS_10__and00001:O)| NONE(visitctrlpart/ABUS_10)| 1     |
+visitctrlpart/ABUS_10__and0001(visitctrlpart/ABUS_10__and00011:O)| NONE(visitctrlpart/ABUS_10)| 1     |
+visitctrlpart/ABUS_1__and0000(visitctrlpart/ABUS_1__and00001:O)  | NONE(visitctrlpart/ABUS_1) | 1     |
+visitctrlpart/ABUS_1__and0001(visitctrlpart/ABUS_1__and00011:O)  | NONE(visitctrlpart/ABUS_1) | 1     |
+visitctrlpart/ABUS_14__and0000(visitctrlpart/ABUS_14__and00001:O)| NONE(visitctrlpart/ABUS_14)| 1     |
+visitctrlpart/ABUS_14__and0001(visitctrlpart/ABUS_14__and00011:O)| NONE(visitctrlpart/ABUS_14)| 1     |
+visitctrlpart/ABUS_8__and0000(visitctrlpart/ABUS_8__and00001:O)  | NONE(visitctrlpart/ABUS_8) | 1     |
+visitctrlpart/ABUS_8__and0001(visitctrlpart/ABUS_8__and00011:O)  | NONE(visitctrlpart/ABUS_8) | 1     |
+visitctrlpart/ABUS_2__and0000(visitctrlpart/ABUS_2__and00001:O)  | NONE(visitctrlpart/ABUS_2) | 1     |
+visitctrlpart/ABUS_2__and0001(visitctrlpart/ABUS_2__and00011:O)  | NONE(visitctrlpart/ABUS_2) | 1     |
+visitctrlpart/ABUS_0__and0000(visitctrlpart/ABUS_0__and00001:O)  | NONE(visitctrlpart/ABUS_0) | 1     |
+visitctrlpart/ABUS_0__and0001(visitctrlpart/ABUS_0__and00011:O)  | NONE(visitctrlpart/ABUS_0) | 1     |
+visitctrlpart/ABUS_13__and0000(visitctrlpart/ABUS_13__and00001:O)| NONE(visitctrlpart/ABUS_13)| 1     |
+visitctrlpart/ABUS_13__and0001(visitctrlpart/ABUS_13__and00011:O)| NONE(visitctrlpart/ABUS_13)| 1     |
+visitctrlpart/ABUS_6__and0000(visitctrlpart/ABUS_6__and00001:O)  | NONE(visitctrlpart/ABUS_6) | 1     |
+visitctrlpart/ABUS_6__and0001(visitctrlpart/ABUS_6__and00011:O)  | NONE(visitctrlpart/ABUS_6) | 1     |
+visitctrlpart/ABUS_7__and0000(visitctrlpart/ABUS_7__and00001:O)  | NONE(visitctrlpart/ABUS_7) | 1     |
+visitctrlpart/ABUS_7__and0001(visitctrlpart/ABUS_7__and00011:O)  | NONE(visitctrlpart/ABUS_7) | 1     |
+visitctrlpart/ABUS_12__and0000(visitctrlpart/ABUS_12__and00001:O)| NONE(visitctrlpart/ABUS_12)| 1     |
+visitctrlpart/ABUS_12__and0001(visitctrlpart/ABUS_12__and00011:O)| NONE(visitctrlpart/ABUS_12)| 1     |
+visitctrlpart/ABUS_5__and0000(visitctrlpart/ABUS_5__and00001:O)  | NONE(visitctrlpart/ABUS_5) | 1     |
+visitctrlpart/ABUS_5__and0001(visitctrlpart/ABUS_5__and00011:O)  | NONE(visitctrlpart/ABUS_5) | 1     |
+alupart/CF__or0000(alupart/CF__or00001:O)                        | NONE(alupart/CF)           | 1     |
+alupart/CF__and0000(alupart/CF__and00001:O)                      | NONE(alupart/CF)           | 1     |
+-----------------------------------------------------------------+----------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 14.320ns (Maximum Frequency: 69.830MHz)
+   Minimum input arrival time before clock: 15.050ns
+   Maximum output required time after clock: 20.919ns
+   Maximum combinational path delay: 8.269ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 11.817ns (frequency: 84.624MHz)
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Delay:               11.817ns (Levels of Logic = 0)
+  Source:            clockpart/t_0 (FF)
+  Destination:       clockpart/t_1 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: clockpart/t_0 to clockpart/t_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q            132   1.372   9.680  clockpart/t_0 (clockpart/t_0)
+     FDC:D                     0.765          clockpart/t_1
+    ----------------------------------------
+    Total                     11.817ns (2.137ns logic, 9.680ns route)
+                                       (18.1% logic, 81.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clockpart/t_0'
+  Clock period: 14.320ns (frequency: 69.830MHz)
+  Total number of paths / destination ports: 69 / 29
+-------------------------------------------------------------------------
+Delay:               7.160ns (Levels of Logic = 2)
+  Source:            quzhipart/IROUT_11_1 (LATCH)
+  Destination:       visitctrlpart/cundata_6 (LATCH)
+  Source Clock:      clockpart/t_0 falling
+  Destination Clock: clockpart/t_0 rising
+
+  Data Path: quzhipart/IROUT_11_1 to visitctrlpart/cundata_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCP:G->Q             1   1.509   1.265  quzhipart/IROUT_11_1 (quzhipart/IROUT_11_1)
+     LUT4_D:I0->O          7   0.738   2.145  visitctrlpart/ABUS_mux0003<0>11_1 (visitctrlpart/ABUS_mux0003<0>11)
+     LUT4:I0->O            1   0.738   0.000  visitctrlpart/cundata_mux0003<0>1 (visitctrlpart/cundata_mux0003<0>)
+     LDE_1:D                   0.765          visitctrlpart/cundata_0
+    ----------------------------------------
+    Total                      7.160ns (3.750ns logic, 3.410ns route)
+                                       (52.4% logic, 47.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clockpart/t_3'
+  Clock period: 6.202ns (frequency: 161.233MHz)
+  Total number of paths / destination ports: 28 / 28
+-------------------------------------------------------------------------
+Delay:               6.202ns (Levels of Logic = 1)
+  Source:            writebackpart/rdata_7 (LATCH)
+  Destination:       writebackpart/rdata_7 (LATCH)
+  Source Clock:      clockpart/t_3 falling
+  Destination Clock: clockpart/t_3 falling
+
+  Data Path: writebackpart/rdata_7 to writebackpart/rdata_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              17   1.509   3.190  writebackpart/rdata_7 (writebackpart/rdata_7)
+     LUT4:I0->O            1   0.738   0.000  writebackpart/rdata_mux0004<7> (writebackpart/rdata_mux0004<7>)
+     LD:D                      0.765          writebackpart/rdata_7
+    ----------------------------------------
+    Total                      6.202ns (3.012ns logic, 3.190ns route)
+                                       (48.6% logic, 51.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clockpart/t_2'
+  Clock period: 4.813ns (frequency: 207.762MHz)
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Delay:               4.813ns (Levels of Logic = 2)
+  Source:            visitctrlpart/ABUS_15 (LATCH)
+  Destination:       visitctrlpart/ABUS_15 (LATCH)
+  Source Clock:      clockpart/t_2 falling
+  Destination Clock: clockpart/t_2 falling
+
+  Data Path: visitctrlpart/ABUS_15 to visitctrlpart/ABUS_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCP:G->Q             3   1.509   1.628  visitctrlpart/ABUS_15 (visitctrlpart/ABUS_15)
+     LUT3:I1->O            1   0.738   0.000  visitctrlpart/ABUS_mux0003<15>_G (N734)
+     MUXF5:I1->O           1   0.173   0.000  visitctrlpart/ABUS_mux0003<15> (visitctrlpart/ABUS_mux0003<15>)
+     LDCP:D                    0.765          visitctrlpart/ABUS_15
+    ----------------------------------------
+    Total                      4.813ns (3.185ns logic, 1.628ns route)
+                                       (66.2% logic, 33.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'RST'
+  Clock period: 4.926ns (frequency: 202.996MHz)
+  Total number of paths / destination ports: 24 / 24
+-------------------------------------------------------------------------
+Delay:               4.926ns (Levels of Logic = 1)
+  Source:            alupart/aluout_7 (LATCH)
+  Destination:       alupart/aluout_7 (LATCH)
+  Source Clock:      RST rising
+  Destination Clock: RST rising
+
+  Data Path: alupart/aluout_7 to alupart/aluout_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE_1:G->Q            5   1.509   1.914  alupart/aluout_7 (alupart/aluout_7)
+     LUT4:I0->O            1   0.738   0.000  alupart/aluout_mux0002<7>48 (alupart/aluout_mux0002<7>)
+     LDE_1:D                   0.765          alupart/aluout_7
+    ----------------------------------------
+    Total                      4.926ns (3.012ns logic, 1.914ns route)
+                                       (61.1% logic, 38.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'alupart/R_0_not0001'
+  Clock period: 4.486ns (frequency: 222.906MHz)
+  Total number of paths / destination ports: 64 / 64
+-------------------------------------------------------------------------
+Delay:               4.486ns (Levels of Logic = 1)
+  Source:            alupart/R_0_7 (LATCH)
+  Destination:       alupart/R_0_7 (LATCH)
+  Source Clock:      alupart/R_0_not0001 falling
+  Destination Clock: alupart/R_0_not0001 falling
+
+  Data Path: alupart/R_0_7 to alupart/R_0_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE:G->Q             2   1.509   1.474  alupart/R_0_7 (alupart/R_0_7)
+     LUT3:I1->O            1   0.738   0.000  alupart/R_0_mux0004<7>1 (alupart/R_0_mux0004<7>)
+     LDCE:D                    0.765          alupart/R_0_7
+    ----------------------------------------
+    Total                      4.486ns (3.012ns logic, 1.474ns route)
+                                       (67.1% logic, 32.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clockpart/t_1'
+  Clock period: 4.640ns (frequency: 215.508MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               4.640ns (Levels of Logic = 1)
+  Source:            alupart/cy (LATCH)
+  Destination:       alupart/cy (LATCH)
+  Source Clock:      clockpart/t_1 falling
+  Destination Clock: clockpart/t_1 falling
+
+  Data Path: alupart/cy to alupart/cy
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              3   1.509   1.628  alupart/cy (alupart/cy)
+     LUT4:I3->O            1   0.738   0.000  alupart/cy_mux0002 (alupart/cy_mux0002)
+     LDE:D                     0.765          alupart/cy
+    ----------------------------------------
+    Total                      4.640ns (3.012ns logic, 1.628ns route)
+                                       (64.9% logic, 35.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clockpart/t_0'
+  Total number of paths / destination ports: 24 / 24
+-------------------------------------------------------------------------
+Offset:              4.120ns (Levels of Logic = 2)
+  Source:            DBUS<7> (PAD)
+  Destination:       visitctrlpart/cundata_7 (LATCH)
+  Destination Clock: clockpart/t_0 rising
+
+  Data Path: DBUS<7> to visitctrlpart/cundata_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           3   0.989   1.628  DBUS_7_IOBUF (fdata_7_OBUF)
+     LUT4:I3->O            1   0.738   0.000  visitctrlpart/cundata_mux0003<7>1 (visitctrlpart/cundata_mux0003<7>)
+     LDE_1:D                   0.765          visitctrlpart/cundata_7
+    ----------------------------------------
+    Total                      4.120ns (2.492ns logic, 1.628ns route)
+                                       (60.5% logic, 39.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RST'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              7.763ns (Levels of Logic = 4)
+  Source:            IODK<7> (PAD)
+  Destination:       alupart/aluout_7 (LATCH)
+  Destination Clock: RST rising
+
+  Data Path: IODK<7> to alupart/aluout_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.989   1.265  IODK_7_IBUF (IODK_7_IBUF)
+     LUT4:I1->O            1   0.738   1.265  alupart/aluout_mux0002<7>22 (alupart/aluout_mux0002<7>_map10)
+     LUT3:I2->O            1   0.738   1.265  alupart/aluout_mux0002<7>48_SW0 (N681)
+     LUT4:I3->O            1   0.738   0.000  alupart/aluout_mux0002<7>48 (alupart/aluout_mux0002<7>)
+     LDE_1:D                   0.765          alupart/aluout_7
+    ----------------------------------------
+    Total                      7.763ns (3.968ns logic, 3.795ns route)
+                                       (51.1% logic, 48.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clockpart/t_1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              15.050ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       alupart/cy (LATCH)
+  Destination Clock: clockpart/t_1 falling
+
+  Data Path: RST to alupart/cy
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           158   0.989  11.110  RST_IBUF (RST_IBUF)
+     INV:I->O              1   0.738   1.265  alupart/cy_0_not00001_INV_0 (alupart/cy_0_not0000)
+     LDE:GE                    0.948          alupart/cy
+    ----------------------------------------
+    Total                     15.050ns (2.675ns logic, 12.375ns route)
+                                       (17.8% logic, 82.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clockpart/t_0'
+  Total number of paths / destination ports: 134 / 42
+-------------------------------------------------------------------------
+Offset:              19.825ns (Levels of Logic = 3)
+  Source:            quzhipart/IROUT_11 (LATCH)
+  Destination:       DBUS<15> (PAD)
+  Source Clock:      clockpart/t_0 falling
+
+  Data Path: quzhipart/IROUT_11 to DBUS<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCP:G->Q            36   1.509   4.400  quzhipart/IROUT_11 (quzhipart/IROUT_11)
+     LUT4:I0->O           19   0.738   3.410  visitctrlpart/ABUS_mux0003<0>11 (N0)
+     LUT4:I1->O           17   0.738   3.190  visitctrlpart/WR1 (nWR_OBUF)
+     IOBUF:T->IO               5.840          DBUS_15_IOBUF (DBUS<15>)
+    ----------------------------------------
+    Total                     19.825ns (8.825ns logic, 11.000ns route)
+                                       (44.5% logic, 55.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 52 / 28
+-------------------------------------------------------------------------
+Offset:              20.919ns (Levels of Logic = 3)
+  Source:            clockpart/t_0 (FF)
+  Destination:       nPRD (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: clockpart/t_0 to nPRD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q            132   1.372   9.680  clockpart/t_0 (clockpart/t_0)
+     LUT4:I3->O            2   0.738   1.474  visitctrlpart/npwr_SW0 (N203)
+     LUT4:I3->O            1   0.738   1.265  visitctrlpart/npwr (nPWR_OBUF)
+     OBUF:I->O                 5.652          nPWR_OBUF (nPWR)
+    ----------------------------------------
+    Total                     20.919ns (8.500ns logic, 12.419ns route)
+                                       (40.6% logic, 59.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'RST'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              9.075ns (Levels of Logic = 1)
+  Source:            alupart/aluout_7 (LATCH)
+  Destination:       DBUS<7> (PAD)
+  Source Clock:      RST rising
+
+  Data Path: alupart/aluout_7 to DBUS<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE_1:G->Q            5   1.509   1.914  alupart/aluout_7 (alupart/aluout_7)
+     IOBUF:I->IO               5.652          DBUS_7_IOBUF (DBUS<7>)
+    ----------------------------------------
+    Total                      9.075ns (7.161ns logic, 1.914ns route)
+                                       (78.9% logic, 21.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clockpart/t_2'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              8.789ns (Levels of Logic = 1)
+  Source:            visitctrlpart/ABUS_15 (LATCH)
+  Destination:       ABUS<15> (PAD)
+  Source Clock:      clockpart/t_2 falling
+
+  Data Path: visitctrlpart/ABUS_15 to ABUS<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCP:G->Q             3   1.509   1.628  visitctrlpart/ABUS_15 (visitctrlpart/ABUS_15)
+     OBUF:I->O                 5.652          ABUS_15_OBUF (ABUS<15>)
+    ----------------------------------------
+    Total                      8.789ns (7.161ns logic, 1.628ns route)
+                                       (81.5% logic, 18.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clockpart/t_3'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              8.426ns (Levels of Logic = 1)
+  Source:            writebackpart/IODB_7 (LATCH)
+  Destination:       IODB<7> (PAD)
+  Source Clock:      clockpart/t_3 falling
+
+  Data Path: writebackpart/IODB_7 to IODB<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   1.509   1.265  writebackpart/IODB_7 (writebackpart/IODB_7)
+     OBUF:I->O                 5.652          IODB_7_OBUF (IODB<7>)
+    ----------------------------------------
+    Total                      8.426ns (7.161ns logic, 1.265ns route)
+                                       (85.0% logic, 15.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Delay:               8.269ns (Levels of Logic = 2)
+  Source:            DBUS<7> (PAD)
+  Destination:       fdata<7> (PAD)
+
+  Data Path: DBUS<7> to fdata<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           3   0.989   1.628  DBUS_7_IOBUF (fdata_7_OBUF)
+     OBUF:I->O                 5.652          fdata_7_OBUF (fdata<7>)
+    ----------------------------------------
+    Total                      8.269ns (6.641ns logic, 1.628ns route)
+                                       (80.3% logic, 19.7% route)
+
+=========================================================================
+CPU : 105.16 / 107.23 s | Elapsed : 105.00 / 107.00 s
+ 
+--> 
+
+Total memory usage is 158200 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   45 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

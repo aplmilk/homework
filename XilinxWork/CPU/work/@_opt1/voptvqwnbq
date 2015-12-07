@@ -1,0 +1,318 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\xilinxwork\CPU
+T_opt
+Z1 VMVESZ`ZgT27<I9`MbL2410
+Z2 04 10 8 work clk_tb_vhd behavior 1
+Z3 =1-bc8556c848a6-55b5fc3c-397-1154
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OE;O;6.5c;42
+T_opt1
+Z7 V=kFPaaX8<JQ4jn<lEIP<P0
+Z8 04 12 8 work store_tb_vhd behavior 1
+Z9 =1-bc8556c848a6-55b5fd85-9c-1440
+R4
+Z10 n@_opt1
+R6
+T_opt2
+Z11 V_abRYS>DS0C2ACWQ22m<@2
+Z12 04 10 8 work alu_tb_vhd behavior 1
+Z13 =1-bc8556c848a6-55b5f4f6-32f-2068
+R4
+Z14 n@_opt2
+R6
+Ealu
+Z15 w1437986986
+Z16 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z17 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z18 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z19 8alu.vhd
+Z20 Falu.vhd
+l0
+L30
+Z21 VR^iWeIccRZXA<iM^ZGDFG1
+Z22 OE;C;6.5c;42
+31
+Z23 o-explicit -93
+Z24 tExplicit 1
+Z25 !s100 :61m;^o60ANmNV6omU:6h2
+Abehavioral
+R16
+R17
+R18
+Z26 DEx4 work 3 alu 0 22 R^iWeIccRZXA<iM^ZGDFG1
+l43
+L41
+Z27 V=hURSO_8:[`?n^C4K]foL2
+R22
+31
+Z28 Mx3 4 ieee 14 std_logic_1164
+Z29 Mx2 4 ieee 15 std_logic_arith
+Z30 Mx1 4 ieee 18 std_logic_unsigned
+R23
+R24
+Z31 !s100 `YRR:?H31lciBPJfWBCM@2
+Ealu_tb_vhd
+Z32 w1437987408
+Z33 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+R17
+R16
+R18
+Z34 8alu_tb.vhd
+Z35 Falu_tb.vhd
+l0
+L34
+Z36 VH95emATG@kLL1]6BSSU3R0
+R22
+31
+R23
+R24
+Z37 !s100 diiz94lWMI:7_fo7FO2jN0
+Abehavior
+R33
+R17
+R16
+R18
+Z38 DEx4 work 10 alu_tb_vhd 0 22 H95emATG@kLL1]6BSSU3R0
+l65
+L37
+Z39 V3UC;B2cDUMgih4iji=mM_1
+R22
+31
+Z40 Mx4 4 ieee 14 std_logic_1164
+Z41 Mx3 4 ieee 18 std_logic_unsigned
+R29
+Z42 Mx1 4 ieee 11 numeric_std
+R23
+R24
+Z43 !s100 i?J3S`cF9V8^SHTAJELJ=3
+Eclk_tb_vhd
+Z44 w1437988712
+R33
+R17
+R16
+R18
+Z45 8clk_tb.vhd
+Z46 Fclk_tb.vhd
+l0
+L34
+Z47 VfXHOo>:A^E4QQBB5NH@Og1
+R22
+31
+R23
+R24
+Z48 !s100 kSTCCU^ff_P4DKJbH=9<c1
+Abehavior
+R33
+R17
+R16
+R18
+Z49 DEx4 work 10 clk_tb_vhd 0 22 fXHOo>:A^E4QQBB5NH@Og1
+l55
+L37
+Z50 V2;bQdgiOBzRaIo>e6L<TT3
+R22
+31
+R40
+R41
+R29
+R42
+R23
+R24
+Z51 !s100 :mnU]5KKo=E=aZGmm6jU>0
+Eclock
+Z52 w1437988640
+R16
+R17
+R18
+Z53 8clock.vhd
+Z54 Fclock.vhd
+l0
+L30
+Z55 V[ZnIb4@0b7X^]XVjQh:WR1
+R22
+31
+R23
+R24
+Z56 !s100 XZIld]hH<dCK<T^4Y]iJz3
+Abehavioral
+R16
+R17
+R18
+Z57 DEx4 work 5 clock 0 22 [ZnIb4@0b7X^]XVjQh:WR1
+l38
+L36
+Z58 VDALYdV0hMQ:z<eiN]U2Z:2
+R22
+31
+R28
+R29
+R30
+R23
+R24
+Z59 !s100 >J=56nRj@5<A1VL=[<nFN1
+Ecpu
+Z60 w1437980096
+R16
+R17
+R18
+Z61 8CPU.vhd
+Z62 FCPU.vhd
+l0
+L30
+Z63 V6R@02?E8jahzUWcE0;4o22
+R22
+31
+R23
+R24
+Z64 !s100 PB@4`O]YlQb3T7V1Ee1CN2
+Abehavioral
+R16
+R17
+R18
+Z65 DEx4 work 3 cpu 0 22 6R@02?E8jahzUWcE0;4o22
+l49
+L47
+Z66 V[iHh4E5S_YEZ2Scg8Te7I2
+R22
+31
+R28
+R29
+R30
+R23
+R24
+Z67 !s100 9bFMWQH6a0A7hFbEk2gF:3
+Equzhi
+Z68 w1437963652
+R16
+R17
+R18
+Z69 8quzhi.vhd
+Z70 Fquzhi.vhd
+l0
+L30
+Z71 VeSAPb7:>U_2HlBT;nPa:91
+R22
+31
+R23
+R24
+Z72 !s100 Nl0@]he0?Kj5@3j:ZejRS0
+Abehavioral
+R16
+R17
+R18
+Z73 DEx4 work 5 quzhi 0 22 eSAPb7:>U_2HlBT;nPa:91
+l42
+L40
+Z74 V;zT]Y;CMdHkc7L:P=kIBE1
+R22
+31
+R28
+R29
+R30
+R23
+R24
+Z75 !s100 WzNO7KD;VKGZLmB1FJmQ;0
+Equzhi_tb_vhd
+Z76 w1437962679
+R33
+R17
+R16
+R18
+Z77 8quzhi_tb.vhd
+Z78 Fquzhi_tb.vhd
+l0
+L34
+Z79 VA`187EL`[LaKOmPfWZa<]0
+R22
+31
+R23
+R24
+Z80 !s100 i?`9b>F8jzgLKVlg_?NK@1
+Abehavior
+R33
+R17
+R16
+R18
+Z81 DEx4 work 12 quzhi_tb_vhd 0 22 A`187EL`[LaKOmPfWZa<]0
+l63
+L37
+Z82 VIddTGiWoV9E_[]Mnm:4NF0
+R22
+31
+R40
+R41
+R29
+R42
+R23
+R24
+Z83 !s100 M`9zbAHOo988zEW9]UK1V2
+Estore
+Z84 w1437989621
+R16
+R17
+R18
+Z85 8store.vhd
+Z86 Fstore.vhd
+l0
+L30
+Z87 V]?031l>8K5o<cad@LUW=z2
+R22
+31
+R23
+R24
+Z88 !s100 j8<?1bXO]TZ]D0[oD[lPW1
+Abehavioral
+R16
+R17
+R18
+Z89 DEx4 work 5 store 0 22 ]?031l>8K5o<cad@LUW=z2
+l43
+L42
+Z90 VjM;TWd[OSBHS3HJ?1Ne=[0
+R22
+31
+R28
+R29
+R30
+R23
+R24
+Z91 !s100 ]I]iANKT@C0D[D0N7M]@o3
+Estore_tb_vhd
+Z92 w1437990201
+R33
+R17
+R16
+R18
+Z93 8store_tb.vhd
+Z94 Fstore_tb.vhd
+l0
+L34
+Z95 V3X@Ji4L^Wl<T;DbzoX?F11
+R22
+31
+R23
+R24
+Z96 !s100 b=bRcoKUz7bUI2ackF2<_1
+Abehavior
+Z97 DEx22 E:\xilinxwork\CPU\work 5 store 0 22 ]?031l>8K5o<cad@LUW=z2
+Z98 DPx22 D:\modeltech_6.5c\ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z99 DPx22 D:\modeltech_6.5c\ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z100 DPx22 D:\modeltech_6.5c\ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z101 DPx22 D:\modeltech_6.5c\ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z102 DEx22 E:\xilinxwork\CPU\work 12 store_tb_vhd 0 22 3X@Ji4L^Wl<T;DbzoX?F11
+31
+Z103 Mx4 22 D:\modeltech_6.5c\ieee 14 std_logic_1164
+Z104 Mx3 22 D:\modeltech_6.5c\ieee 18 std_logic_unsigned
+Z105 Mx2 22 D:\modeltech_6.5c\ieee 15 std_logic_arith
+Z106 Mx1 22 D:\modeltech_6.5c\ieee 11 numeric_std
+l67
+L37
+Z107 VMVmjW?_dzkPzOI3LzMXH70
+R22
+R23
+R24
+Z108 !s100 hfjggmYhWXSX2zPhX2HGW2

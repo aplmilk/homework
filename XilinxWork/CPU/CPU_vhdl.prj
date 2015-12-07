@@ -1,0 +1,7 @@
+vhdl work "F:\CPU\store.vhd"
+vhdl work "F:\CPU\quzhi.vhd"
+vhdl work "F:\CPU\clock.vhd"
+vhdl work "F:\CPU\alu.vhd"
+vhdl work "F:\CPU\WriteBack.vhd"
+vhdl work "F:\CPU\VisitCtrl.vhd"
+vhdl work "F:\CPU\CPU.vhd"

@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1431920156 source:h:\work\12week\hashing\main.cpp
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	<ctime>
+
+1431920156 source:e:\work\12week\hashing\main.cpp
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	<ctime>
+

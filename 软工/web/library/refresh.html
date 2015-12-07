@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{%load staticfiles%}
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/tp.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>无标题文档</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<style type="text/css">
+<!--
+.STYLE3 {color: #D7E9E9}
+.STYLE4 {font-weight: bold; font-size: 18px;}
+background {
+	background-color: #D6E9ED;
+}
+-->
+</style>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="100%" border="0" cellspacing="8">
+    <tr>
+      <td><div align="center" class="STYLE3"><img src={% static "top.jpg" %} alt=" " width="900" height="135" /></div></td>
+    </tr>
+    <tr>
+      <td><table width="80%" border="0" align="center" cellspacing="2">
+        <tr>
+          <td width="25%" class="STYLE3"><div align="center"><span class="STYLE4"><a href="/index/">主页</a></span></div></td>
+          <td width="25%" class="STYLE3"><div align="center"><span class="STYLE4"><a href="/addauthor/">添加作者</a></span></div></td>
+          <td width="25%" class="STYLE3"><div align="center"><span class="STYLE4"><a href="/addbook/">添加书籍</a></span></div></td>
+          <td width="25%" class="STYLE3"><div align="center"><span class="STYLE4"><a href="/books/">图书管理</a></span></div></td>
+        </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td><!-- InstanceBeginEditable name="               " --><p class="STYLE3">&nbsp;</p>
+        <p class="STYLE3">&nbsp;</p>
+        <div align="center">
+          <p class="STYLE4">修改书籍信息：</p>
+          <table width="316" height="306" border="1">
+
+            <tr>
+              <th width="69" scope="row">书名</th>
+              <td width="231"><label for="textfield"></label>
+                  <input name="title" type="text" id="textfield" value={{thebook.Title}} /></td>
+            </tr>
+            <tr>
+              <th scope="row">作者</th>
+              <td><label for="select" ></label>
+                  <select name="AuthorID" id="AuthorID">
+                    
+                  
+           	{% for author in count%}
+            
+                  
+                    <option value='{{author.AuthorID}}'>{{ author.Name }}</option>
+                    
+                  
+			{% endfor %}
+          
+                
+                  </select>
+                <a href="/addauthor/">新添作者&gt;&gt;</a></td>
+            </tr>
+            <tr>
+              <th scope="row">出版社</th>
+              <td><input name="Publisher" type="text" id="textfield4" value={{thebook.Publisher}} /></td>
+            </tr>
+            <tr>
+              <th scope="row">出版日期</th>
+              <td><input name="publishdate" type="text" id="textfield5" value={{thebook.PublishDate}} /></td>
+            </tr>
+            <tr>
+              <th scope="row">价格</th>
+              <td><input name="price" type="text" id="textfield3" value={{thebook.Price}} /></td>
+            </tr>
+          </table>
+          <p>
+            <input type="submit" name="Submit" value="提交" id="Submit" />
+          </p>
+          <p class="STYLE4">&nbsp;</p>
+        </div>
+        <p class="STYLE3">&nbsp;</p>
+        <p class="STYLE3">&nbsp;</p>
+        <p class="STYLE3">&nbsp;</p>
+        <p class="STYLE3">&nbsp;</p>
+        <p class="STYLE3">&nbsp;</p>
+        <p class="STYLE3">&nbsp;</p>
+        <p class="STYLE3">&nbsp;</p>
+      <!-- InstanceEndEditable --></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</form>
+</body>
+<!-- InstanceEnd --></html>

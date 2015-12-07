@@ -1,0 +1,5 @@
+# begin LFP file F:\CPU\CPU.lfp
+designfile CPU.vhd
+parttype xcv200-4-pq240
+bus_delimiter 0;
+set_busdelim_onsave 1;

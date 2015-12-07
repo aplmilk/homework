@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "E:/xilinxwork/zongxian/zongxiantb_isim_beh.exe" -prj "E:/xilinxwork/zongxian/zongxiantb_beh.prj" "work.zongxiantb" 

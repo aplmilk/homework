@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{%load staticfiles%}
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/tp.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>图书管理</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<style type="text/css">
+<!--
+.STYLE3 {color: #D7E9E9}
+.STYLE4 {font-weight: bold; font-size: 18px;}
+background {
+	background-color: #D6E9ED;
+}
+-->
+</style>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="100%" border="0" cellspacing="8">
+    <tr>
+      <td><div align="center" class="STYLE3"><img src={% static "top.jpg" %} alt=" " width="900" height="135" /></div></td>
+    </tr>
+    <tr>
+      <td><table width="80%" border="0" align="center" cellspacing="2">
+        <tr>
+          <td width="25%" class="STYLE3"><div align="center"><span class="STYLE4"><a href="/index/">主页</a></span></div></td>
+          <td width="25%" class="STYLE3"><div align="center"><span class="STYLE4"><a href="/addauthor/">添加作者</a></span></div></td>
+          <td width="25%" class="STYLE3"><div align="center"><span class="STYLE4"><a href="/addbook/">添加书籍</a></span></div></td>
+          <td width="25%" class="STYLE3"><div align="center"><span class="STYLE4"><a href="/books/">图书管理</a></span></div></td>
+        </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td><!-- InstanceBeginEditable name="               " -->
+        <p>&nbsp;</p>
+        <div align="center">
+          <p class="STYLE4">所有图书</p>
+          <table width="100%" border="1" bordercolor="#000000">
+            <tr>
+              <td><strong>书名</strong></td>
+              <td><strong>作者ID</strong></td>
+              <td><strong>出版社</strong></td>
+              <td><strong>出版时间</strong></td>
+              <td><strong>价格</strong></td>
+              <td><strong>ISBN</strong></td>
+              <td><strong>更新</strong></td>
+              <td><strong>删除</strong></td>
+            </tr>
+            {% for book in books %}
+  <tr>
+    <td><a href="/bookinfo/{{book.ISBN}}/">{{book.Title}}</a></td>
+    <td>{{book.AuthorID.Name}}</td>
+    <td>{{book.Publisher}}</td>
+    <td bordercolor="#D7E9E9">{{book.PublishDate}}</td>
+    <td>{{book.Price}}</td>
+    <td>{{book.ISBN}}</td>
+    <td><a href="/refresh/{{book.ISBN}}">更新</a></td>
+    <td><button name = "delete" value = "{{book.ISBN}}">删除</button></td>
+  </tr>
+            {% endfor %}
+          </table>
+          <p class="STYLE4">&nbsp;</p>
+        </div>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      <!-- InstanceEndEditable --></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</form>
+</body>
+<!-- InstanceEnd --></html>

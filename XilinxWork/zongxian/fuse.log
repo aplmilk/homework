@@ -1,0 +1,20 @@
+Running: D:\Xilinx\13.4\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o E:/xilinxwork/zongxian/zongxiantb_isim_beh.exe -prj E:/xilinxwork/zongxian/zongxiantb_beh.prj work.zongxiantb 
+ISim O.87xd (signature 0x2f00eba5)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "E:/xilinxwork/zongxian/zongxian.vhd" into library work
+Parsing VHDL file "E:/xilinxwork/zongxian/zongxiantb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 105232 KB
+Fuse CPU Usage: 841 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling architecture behavioral of entity zongxian [zongxian_default]
+Compiling architecture behavior of entity zongxiantb
+Time Resolution for simulation is 1ps.
+Compiled 5 VHDL Units
+Built simulation executable E:/xilinxwork/zongxian/zongxiantb_isim_beh.exe
+Fuse Memory Usage: 114176 KB
+Fuse CPU Usage: 982 ms

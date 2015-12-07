@@ -1,0 +1,425 @@
+010913D7  int         3  
+010913D8  int         3  
+010913D9  int         3  
+010913DA  int         3  
+010913DB  int         3  
+010913DC  int         3  
+010913DD  int         3  
+010913DE  int         3  
+010913DF  int         3  
+010913E0  int         3  
+010913E1  int         3  
+010913E2  int         3  
+010913E3  int         3  
+010913E4  int         3  
+010913E5  int         3  
+010913E6  int         3  
+010913E7  int         3  
+010913E8  int         3  
+010913E9  int         3  
+010913EA  int         3  
+010913EB  int         3  
+010913EC  int         3  
+010913ED  int         3  
+010913EE  int         3  
+010913EF  int         3  
+
+static char insBuffer(BUFFER buf, char e)
+{
+010913F0  push        ebp  
+010913F1  mov         ebp,esp  
+010913F3  sub         esp,0C0h  
+010913F9  push        ebx  
+010913FA  push        esi  
+010913FB  push        edi  
+010913FC  lea         edi,[ebp-0C0h]  
+
+static char insBuffer(BUFFER buf, char e)
+{
+01091402  mov         ecx,30h  
+01091407  mov         eax,0CCCCCCCCh  
+0109140C  rep stos    dword ptr es:[edi]  
+    if (buf->nsize == BUF_SIZE) {
+0109140E  mov         eax,dword ptr [buf]  
+01091411  cmp         dword ptr [eax+18h],10h  
+01091415  jne         insBuffer+2Dh (0109141Dh)  
+        return '\0';
+01091417  xor         al,al  
+01091419  jmp         insBuffer+70h (01091460h)  
+    } else {
+0109141B  jmp         insBuffer+70h (01091460h)  
+        buf->data[buf->tail] = e;
+0109141D  mov         eax,dword ptr [buf]  
+01091420  mov         ecx,dword ptr [eax+14h]  
+01091423  mov         edx,dword ptr [buf]  
+01091426  mov         al,byte ptr [e]  
+01091429  mov         byte ptr [edx+ecx],al  
+        buf->tail++;
+0109142C  mov         eax,dword ptr [buf]  
+0109142F  mov         ecx,dword ptr [eax+14h]  
+01091432  add         ecx,1  
+01091435  mov         edx,dword ptr [buf]  
+01091438  mov         dword ptr [edx+14h],ecx  
+        buf->nsize++;
+0109143B  mov         eax,dword ptr [buf]  
+0109143E  mov         ecx,dword ptr [eax+18h]  
+01091441  add         ecx,1  
+01091444  mov         edx,dword ptr [buf]  
+01091447  mov         dword ptr [edx+18h],ecx  
+        if (buf->tail >= BUF_SIZE)
+0109144A  mov         eax,dword ptr [buf]  
+0109144D  cmp         dword ptr [eax+14h],10h  
+01091451  jl          insBuffer+6Dh (0109145Dh)  
+            buf->tail = 0;
+01091453  mov         eax,dword ptr [buf]  
+01091456  mov         dword ptr [eax+14h],0  
+        return e;
+0109145D  mov         al,byte ptr [e]  
+    }
+}
+01091460  pop         edi  
+01091461  pop         esi  
+    }
+}
+01091462  pop         ebx  
+01091463  mov         esp,ebp  
+01091465  pop         ebp  
+01091466  ret  
+01091467  int         3  
+01091468  int         3  
+01091469  int         3  
+0109146A  int         3  
+0109146B  int         3  
+0109146C  int         3  
+0109146D  int         3  
+0109146E  int         3  
+0109146F  int         3  
+01091470  int         3  
+01091471  int         3  
+01091472  int         3  
+01091473  int         3  
+01091474  int         3  
+01091475  int         3  
+01091476  int         3  
+01091477  int         3  
+01091478  int         3  
+01091479  int         3  
+0109147A  int         3  
+0109147B  int         3  
+0109147C  int         3  
+0109147D  int         3  
+0109147E  int         3  
+0109147F  int         3  
+01091480  int         3  
+01091481  int         3  
+01091482  int         3  
+01091483  ?? ?? 
+01091484  ?? ?? 
+01091485  ?? ?? 
+01091486  ?? ?? 
+01091487  ?? ?? 
+01091488  ?? ?? 
+01091489  ?? ?? 
+0109148A  ?? ?? 
+0109148B  ?? ?? 
+0109148C  ?? ?? 
+0109148D  ?? ?? 
+0109148E  ?? ?? 
+0109148F  ?? ?? 
+01091490  ?? ?? 
+01091491  ?? ?? 
+01091492  ?? ?? 
+01091493  ?? ?? 
+01091494  ?? ?? 
+01091495  ?? ?? 
+01091496  ?? ?? 
+01091497  ?? ?? 
+01091498  ?? ?? 
+01091499  ?? ?? 
+0109149A  ?? ?? 
+0109149B  ?? ?? 
+0109149C  ?? ?? 
+0109149D  ?? ?? 
+0109149E  ?? ?? 
+0109149F  ?? ?? 
+010914A0  ?? ?? 
+010914A1  ?? ?? 
+010914A2  ?? ?? 
+010914A3  ?? ?? 
+010914A4  ?? ?? 
+010914A5  ?? ?? 
+010914A6  ?? ?? 
+010914A7  ?? ?? 
+010914A8  ?? ?? 
+010914A9  ?? ?? 
+010914AA  ?? ?? 
+010914AB  ?? ?? 
+010914AC  ?? ?? 
+010914AD  ?? ?? 
+010914AE  ?? ?? 
+010914AF  ?? ?? 
+010914B0  ?? ?? 
+010914B1  ?? ?? 
+010914B2  ?? ?? 
+010914B3  ?? ?? 
+010914B4  ?? ?? 
+010914B5  ?? ?? 
+010914B6  ?? ?? 
+010914B7  ?? ?? 
+010914B8  ?? ?? 
+010914B9  ?? ?? 
+010914BA  ?? ?? 
+        tc = buf->data[buf->head];
+010914BB  dec         eax  
+010914BC  adc         byte ptr [ebx+48A0855h],cl  
+010914C2  or          cl,byte ptr [eax+458BFB45h]  
+        buf->head++;
+010914C8  or          byte ptr [ebx-3E7CEFB8h],cl  
+010914CE  add         dword ptr [ebx+4A890855h],ecx  
+010914D4  adc         byte ptr [ebx+488B0845h],cl  
+        buf->nsize--;
+010914DA  sbb         byte ptr [ebx+558B01E9h],al  
+010914E0  or          byte ptr [ecx+458B184Ah],cl  
+        if (buf->head >= BUF_SIZE)
+010914E6  or          byte ptr [ebx+7C101078h],al  
+010914EC  or          cl,byte ptr [ebx+40C70845h]  
+            buf->head = 0;
+010914F2  adc         byte ptr [eax],al  
+010914F4  add         byte ptr [eax],al  
+010914F6  add         byte ptr [edx+4EBFB45h],cl  
+    } else {
+010914FC  jmp         outBuffer+70h (01091500h)  
+        return '\0';
+010914FE  xor         al,al  
+    }
+}
+01091500  pop         edi  
+01091501  pop         esi  
+01091502  pop         ebx  
+01091503  mov         esp,ebp  
+01091505  pop         ebp  
+01091506  ret  
+--- 无源文件 -----------------------------------------------------------------------
+01091507  int         3  
+01091508  int         3  
+01091509  int         3  
+0109150A  int         3  
+0109150B  int         3  
+0109150C  int         3  
+0109150D  int         3  
+0109150E  int         3  
+0109150F  int         3  
+01091510  int         3  
+01091511  int         3  
+01091512  int         3  
+01091513  int         3  
+01091514  int         3  
+01091515  int         3  
+01091516  int         3  
+01091517  int         3  
+01091518  int         3  
+01091519  int         3  
+--- 无源文件 -----------------------------------------------------------------------
+0109151A  int         3  
+0109151B  int         3  
+0109151C  int         3  
+0109151D  int         3  
+0109151E  int         3  
+0109151F  int         3  
+01091520  int         3  
+01091521  int         3  
+01091522  int         3  
+01091523  int         3  
+01091524  int         3  
+01091525  int         3  
+01091526  int         3  
+01091527  int         3  
+01091528  int         3  
+01091529  int         3  
+0109152A  int         3  
+0109152B  int         3  
+0109152C  int         3  
+0109152D  int         3  
+0109152E  int         3  
+0109152F  int         3  
+--- c:\users\tt\documents\visual studio 2012\projects\consoleapplication1\consoleapplication1\buffer.c
+
+
+--- 无源文件 -----------------------------------------------------------------------
+01091621  int         3  
+01091622  int         3  
+01091623  int         3  
+01091624  int         3  
+01091625  int         3  
+01091626  int         3  
+01091627  int         3  
+01091628  int         3  
+01091629  int         3  
+0109162A  int         3  
+0109162B  int         3  
+0109162C  int         3  
+0109162D  int         3  
+0109162E  int         3  
+0109162F  int         3  
+01091630  int         3  
+01091631  int         3  
+01091632  int         3  
+01091633  int         3  
+01091634  int         3  
+01091635  int         3  
+01091636  int         3  
+01091637  int         3  
+01091638  int         3  
+01091639  int         3  
+0109163A  int         3  
+0109163B  int         3  
+0109163C  int         3  
+0109163D  int         3  
+0109163E  int         3  
+0109163F  int         3  
+01091640  int         3  
+01091641  int         3  
+01091642  int         3  
+01091643  int         3  
+01091644  int         3  
+01091645  int         3  
+01091646  int         3  
+01091647  int         3  
+01091648  int         3  
+01091649  int         3  
+0109164A  int         3  
+0109164B  int         3  
+0109164C  int         3  
+0109164D  int         3  
+0109164E  int         3  
+0109164F  int         3  
+01091650  int         3  
+01091651  int         3  
+01091652  int         3  
+01091653  int         3  
+01091654  int         3  
+01091655  int         3  
+01091656  int         3  
+01091657  int         3  
+01091658  int         3  
+01091659  int         3  
+0109165A  int         3  
+0109165B  int         3  
+0109165C  int         3  
+0109165D  int         3  
+0109165E  int         3  
+0109165F  int         3  
+--- c:\users\tt\documents\visual studio 2012\projects\consoleapplication1\consoleapplication1\buffer.c 
+
+
+int main()
+{
+01091660  push        ebp  
+01091661  mov         ebp,esp  
+01091663  sub         esp,0E4h  
+01091669  push        ebx  
+0109166A  push        esi  
+0109166B  push        edi  
+0109166C  lea         edi,[ebp-0E4h]  
+01091672  mov         ecx,39h  
+01091677  mov         eax,0CCCCCCCCh  
+0109167C  rep stos    dword ptr es:[edi]  
+    int k, c;
+
+    BUFFER smpbuf = (BUFFER)malloc(sizeof(struct buffer));
+0109167E  mov         esi,esp  
+01091680  push        1Ch  
+01091682  call        dword ptr ds:[10992C8h]  
+01091688  add         esp,4  
+0109168B  cmp         esi,esp  
+0109168D  call        __RTC_CheckEsp (01091145h)  
+01091692  mov         dword ptr [smpbuf],eax  
+    smpbuf->head = 0;
+01091695  mov         eax,dword ptr [smpbuf]  
+01091698  mov         dword ptr [eax+10h],0  
+    smpbuf->tail = 0;
+0109169F  mov         eax,dword ptr [smpbuf]  
+010916A2  mov         dword ptr [eax+14h],0  
+    smpbuf->nsize = 0;
+010916A9  mov         eax,dword ptr [smpbuf]  
+010916AC  mov         dword ptr [eax+18h],0  
+
+
+010916B3  mov         esi,esp  
+010916B5  push        1095884h  
+010916BA  call        dword ptr ds:[10992D8h]  
+010916C0  add         esp,4  
+010916C3  cmp         esi,esp  
+010916C5  call        __RTC_CheckEsp (01091145h)  
+	printf("Please input any word between 0-9 or a-z or A-Z,and press - to get element out of queue,press Esc to exit:\n");
+010916CA  mov         esi,esp  
+010916CC  push        10958D0h  
+010916D1  call        dword ptr ds:[10992D8h]  
+010916D7  add         esp,4  
+010916DA  cmp         esi,esp  
+010916DC  call        __RTC_CheckEsp (01091145h)  
+
+010916E1  mov         esi,esp  
+010916E3  push        1095884h  
+010916E8  call        dword ptr ds:[10992D8h]  
+010916EE  add         esp,4  
+010916F1  cmp         esi,esp  
+010916F3  call        __RTC_CheckEsp (01091145h)  
+
+	while (CHR_ESC != (k = _getche())) {
+010916F8  mov         esi,esp  
+010916FA  call        dword ptr ds:[10992CCh]  
+01091700  cmp         esi,esp  
+01091702  call        __RTC_CheckEsp (01091145h)  
+01091707  mov         dword ptr [k],eax  
+0109170A  cmp         dword ptr [k],1Bh  
+0109170E  je          main+19Eh (010917FEh)  
+		if (CHR_CR == k) {
+01091714  cmp         dword ptr [k],0Dh  
+01091718  jne         main+0CBh (0109172Bh)  
+			prettyOutput(smpbuf);
+0109171A  mov         eax,dword ptr [smpbuf]  
+0109171D  push        eax  
+0109171E  call        prettyOutput (01091530h)  
+01091723  add         esp,4  
+01091726  jmp         main+199h (010917F9h)  
+		} else if (CHR_HL == k) {
+0109172B  cmp         dword ptr [k],2Dh  
+		} else if (CHR_HL == k) {
+0109172F  jne         main+11Fh (0109177Fh)  
+			if (c = outBuffer(smpbuf))
+01091731  mov         eax,dword ptr [smpbuf]  
+01091734  push        eax  
+01091735  call        outBuffer (01091490h)  
+0109173A  add         esp,4  
+0109173D  movsx       ecx,al  
+01091740  mov         dword ptr [c],ecx  
+01091743  cmp         dword ptr [c],0  
+01091747  je          main+106h (01091766h)  
+				printf("\t get element %c out of queue\n", c);
+01091749  mov         esi,esp  
+0109174B  mov         eax,dword ptr [c]  
+0109174E  push        eax  
+0109174F  push        109591Ch  
+01091754  call        dword ptr ds:[10992D8h]  
+0109175A  add         esp,8  
+0109175D  cmp         esi,esp  
+0109175F  call        __RTC_CheckEsp (01091145h)  
+			else
+01091764  jmp         main+11Dh (0109177Dh)  
+				printf("\tThe queue is empty\n");
+01091766  mov         esi,esp  
+01091768  push        109593Ch  
+0109176D  call        dword ptr ds:[10992D8h]  
+01091773  add         esp,4  
+01091776  cmp         esi,esp  
+01091778  call        __RTC_CheckEsp (01091145h)  
+0109177D  jmp         main+199h (010917F9h)  
+		} else if ((k >= '0' && k <= '9') || (k >= 'A' && k <= 'Z')|| (k >= 'a' && k <= 'z')) {
+0109177F  cmp         dword ptr [k],30h  
+01091783  jl          main+12Bh (0109178Bh)  
+01091785  cmp         dword ptr [k],39h  
+01091789  jle         main+137h (01091797h)  
+0109178B  cmp         dword ptr [k],41h  
+0109178F  jl          main+185h (010917E5h)  
+01091791  cmp         dword ptr [k],5Ah  
